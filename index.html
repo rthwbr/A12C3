@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vocab Trainer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div>
+        <h1>Vocab</h1>
+        <p id="progress">0 cards</p>
+      </div>
+      <button id="resetBtn" class="text-btn" type="button">Reset</button>
+    </header>
+
+    <section class="trainer" aria-label="Vocabulary trainer">
+      <div id="empty" class="empty hidden">
+        <div class="empty-title">All caught up.</div>
+        <p>No cards are due right now.</p>
+        <button id="againBtn" class="outline-btn" type="button">Review again</button>
+      </div>
+
+      <div id="stack" class="stack" aria-live="polite"></div>
+
+      <div id="controls" class="controls hidden">
+        <button id="noBtn" class="circle-btn no" type="button" aria-label="Didn't know">×</button>
+        <span>swipe</span>
+        <button id="yesBtn" class="circle-btn yes" type="button" aria-label="Knew it">✓</button>
+      </div>
+    </section>
+
+    <footer>
+      <span>← didn't know</span>
+      <span>tap to flip</span>
+      <span>knew it →</span>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
